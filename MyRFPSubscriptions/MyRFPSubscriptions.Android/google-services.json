@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "372059611943",
+    "firebase_url": "https://mysubscriptions-473ed.firebaseio.com",
+    "project_id": "mysubscriptions-473ed",
+    "storage_bucket": "mysubscriptions-473ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372059611943:android:418837ee9b733e8a927f02",
+        "android_client_info": {
+          "package_name": "com.companyname.myrfpsubscriptions"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372059611943-dev5l60h88dqfrpgdl9ob6fusmp3rhcl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBZ-W3TPGhJD9d3MZHTFk_LRd1o86cbuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372059611943-dev5l60h88dqfrpgdl9ob6fusmp3rhcl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "372059611943-ru2im9te6pkskn4rip5ehm4u8v3ldsh0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.anitotechnology.MySubscriptions"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
