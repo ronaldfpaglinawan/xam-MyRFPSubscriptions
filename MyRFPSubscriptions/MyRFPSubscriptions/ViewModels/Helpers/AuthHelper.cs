@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace MyRFPSubscriptions.ViewModels.Helpers
 {
@@ -15,16 +16,32 @@ namespace MyRFPSubscriptions.ViewModels.Helpers
 
     public class Auth
     {
-        private static IAuth auth;
+        private static IAuth auth = DependencyService.Get<IAuth>();
 
         public static async Task<bool> RegisterUser(string name, string email, string password)
         {
-            return await auth.RegisterUser(name,email, password);
+            try
+            {
+                return await auth.RegisterUser(name, email, password);
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                return false;
+            }
         }
 
         public static async Task<bool> AuthenticateUser(string email, string password)
         {
-            return await auth.AuthenticateUser(email,password);
+            try
+            {
+                return await auth.AuthenticateUser(email,password);
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", ex.Message, "Ok");
+                return false;
+            }
         }
 
         public static bool IsAuthenticated()
