@@ -12,7 +12,9 @@ using Android.Widget;
 using Java.Util;
 using MyRFPSubscriptions.Models;
 using MyRFPSubscriptions.ViewModels.Helpers;
+using Xamarin.Forms;
 
+[assembly: Dependency(typeof(MyRFPSubscriptions.Droid.Dependencies.Firestore))]
 namespace MyRFPSubscriptions.Droid.Dependencies
 {
     public class Firestore : IFirestore

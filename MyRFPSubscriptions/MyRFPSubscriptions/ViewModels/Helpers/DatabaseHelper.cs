@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace MyRFPSubscriptions.ViewModels.Helpers
 {
@@ -16,24 +17,24 @@ namespace MyRFPSubscriptions.ViewModels.Helpers
 
     public class DatabaseHelper
     {
-        private static IFirestore firestore;
+        private static IFirestore firestore = DependencyService.Get<IFirestore>();
 
-        public Task<bool> DeleteSubscription(Subscription subscription)
+        public static Task<bool> DeleteSubscription(Subscription subscription)
         {
             return firestore.DeleteSubscription(subscription);
         }
 
-        public bool InsertSubscription(Subscription subscription)
+        public static bool InsertSubscription(Subscription subscription)
         {
             return firestore.InsertSubscription(subscription);
         }
 
-        public Task<IList<Subscription>> ReadSubscription()
+        public static Task<IList<Subscription>> ReadSubscription()
         {
             return firestore.ReadSubscription();
         }
 
-        public Task<bool> UpdateSubscription(Subscription subscription)
+        public static Task<bool> UpdateSubscription(Subscription subscription)
         {
             return firestore.UpdateSubscription(subscription);
         }
