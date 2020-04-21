@@ -51,7 +51,7 @@ namespace MyRFPSubscriptions.Droid.Dependencies
             }
         }
 
-        public Task<IList<Subscription>> ReadSubscription()
+        public Task<IList<Subscription>> ReadSubscriptions()
         {
             throw new NotImplementedException();
         }

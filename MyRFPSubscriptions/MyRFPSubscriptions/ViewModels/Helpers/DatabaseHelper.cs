@@ -12,7 +12,7 @@ namespace MyRFPSubscriptions.ViewModels.Helpers
         bool InsertSubscription(Subscription subscription);
         Task<bool> DeleteSubscription(Subscription subscription);
         Task<bool> UpdateSubscription(Subscription subscription);
-        Task<IList<Subscription>> ReadSubscription();
+        Task<IList<Subscription>> ReadSubscriptions();
     }
 
     public class DatabaseHelper
@@ -29,9 +29,9 @@ namespace MyRFPSubscriptions.ViewModels.Helpers
             return firestore.InsertSubscription(subscription);
         }
 
-        public static Task<IList<Subscription>> ReadSubscription()
+        public static Task<IList<Subscription>> ReadSubscriptions()
         {
-            return firestore.ReadSubscription();
+            return firestore.ReadSubscriptions();
         }
 
         public static Task<bool> UpdateSubscription(Subscription subscription)

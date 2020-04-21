@@ -1,4 +1,5 @@
-﻿using MyRFPSubscriptions.ViewModels.Helpers;
+﻿using MyRFPSubscriptions.ViewModels;
+using MyRFPSubscriptions.ViewModels.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,12 @@ namespace MyRFPSubscriptions.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SubscriptionsPage : ContentPage
     {
+        SubscriptionsVM vm;
         public SubscriptionsPage()
         {
             InitializeComponent();
+
+            vm = Resources["vm"] as SubscriptionsVM;
         }
 
         protected override async void OnAppearing()
@@ -26,6 +30,10 @@ namespace MyRFPSubscriptions.Views
             {
                 await Task.Delay(300);
                 await Navigation.PushAsync(new LoginPage());
+            }
+            else
+            {
+                vm.ReadSubscriptions();
             }
         }
 
