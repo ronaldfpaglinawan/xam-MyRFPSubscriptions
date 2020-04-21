@@ -12,6 +12,7 @@
             <vm:SubscriptionsVM x:Key="vm"/>
         </ResourceDictionary>
     </ContentPage.Resources>
+    
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add"
                      Clicked="ToolbarItem_Clicked"/>
@@ -22,7 +23,9 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}"
-                              Detail="{Binding SubscribedDate}"/>
+                              Detail="{Binding SubscribedDate}"
+                              TextColor="Red"
+                              DetailColor="DarkBlue"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

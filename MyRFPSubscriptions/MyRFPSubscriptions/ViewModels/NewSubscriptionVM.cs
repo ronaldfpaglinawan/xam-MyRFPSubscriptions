@@ -45,13 +45,17 @@ namespace MyRFPSubscriptions.ViewModels
 
         private void SaveSubscription(object obj)
         {
-            DatabaseHelper.InsertSubscription(new Models.Subscription
+            bool result = DatabaseHelper.InsertSubscription(new Models.Subscription
             {
                 IsActive = IsActive,
                 Name = Name,
                 UserId = Auth.GetCurrentUserId(),
                 SubscribedDate = DateTime.Now
             });
+            if (result)
+                App.Current.MainPage.Navigation.PopAsync();
+            else
+                App.Current.MainPage.DisplayAlert("Error", "Something went wrong, please try again", "Ok");
         }
 
         private bool SaveSubscriptionCanExecute(object arg)
