@@ -13,7 +13,6 @@ namespace MyRFPSubscriptions.ViewModels
         public SubscriptionsVM()
         {
             Subscriptions = new ObservableCollection<Subscription>();
-
         }
 
         public async void ReadSubscriptions()
