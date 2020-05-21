@@ -16,7 +16,6 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
@@ -102,7 +101,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyRFPSubscriptions\MyRFPSubscriptions.csproj">
-      <Project>{CAA8AB81-4FFD-4F7F-8E6E-1A5E42279D3E}</Project>
+      <Project>{A2FCF87A-4F75-417F-B465-0402C94B012C}</Project>
       <Name>MyRFPSubscriptions</Name>
     </ProjectReference>
   </ItemGroup>
