@@ -20,7 +20,8 @@
     
     <ContentPage.Content>
         <ListView BindingContext="{StaticResource vm}"
-                  ItemsSource="{Binding Subscriptions}">
+                  ItemsSource="{Binding Subscriptions}"
+                  SelectedItem="{Binding SelectedSubscription, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}"
